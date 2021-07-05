@@ -9,8 +9,8 @@ class Solution {
             int area = (j - i) * (height[i] > height[j] ? height[j] : height[i]);
             if (area > maxArea) maxArea = area;
             
-            if (height[i] > height[j]) j--;
-            else if (height[j] > height[i]) i++;
+            if (height[i] >= height[j]) j--;
+            else if (height[j] >= height[i]) i++;
             else if (height[i] == height[j]) {
                 i++;
                 j--;
